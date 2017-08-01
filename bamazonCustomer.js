@@ -56,7 +56,7 @@ function promptUserPurchase() {
 			filter: Number
 		}
 	]).then(function(input) {
-		console.log("Customer has selected: \n    item_id = "  + input.item_id + "\n    quantity = " + input.quantity);
+		//console.log("Customer has selected: \n    item_id = "  + input.item_id + "\n    quantity = " + input.quantity);
 
 		var item = input.item_id;
 		var quantity = input.quantity;
