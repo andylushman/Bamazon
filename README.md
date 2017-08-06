@@ -16,6 +16,7 @@ To run the customer interface please follow the steps below:
 > node bamazonCustomer.js
 
 **Example**
+
 ![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/customer1.png)
 
 **Manager Interace**
