@@ -19,6 +19,8 @@ To run the customer interface please follow the steps below:
 
 ![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/customer1.png)
 
+
+
 **Manager Interace**
 The manager interface presents a list of four options, as below.
 
@@ -42,3 +44,8 @@ To run the manager interface please follow the steps below:
 > cd bamazon
 > npm install
 > node bamazonManager.js
+
+**Example**
+![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/manager1.png)
+
+![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/manager2.png)
