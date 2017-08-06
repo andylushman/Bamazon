@@ -11,9 +11,10 @@ The customer interface allows the user to view the current inventory of store it
 
 To run the customer interface please follow the steps below:
 
-> git clone https://github.com/andylushman/Bamazon.git   cd bamazon  
-> npm install
-> node bamazonCustomer.js
+> git clone https://github.com/andylushman/Bamazon.git   
+> cd bamazon       
+> npm install     
+> node bamazonCustomer.js      
 
 **Example**
 
@@ -21,10 +22,10 @@ To run the customer interface please follow the steps below:
 
 
 
-**Manager Interace**
+**Manager Interace**  
 The manager interface presents a list of four options, as below.
 
-> ? Please select an option: (Use arrow keys)
+> ? Please select an option: (Use arrow keys)         
 > ❯ View Products for Sale  
 > View Low Inventory    
 > Add to Inventory    
@@ -46,6 +47,6 @@ To run the manager interface please follow the steps below:
 > node bamazonManager.js
 
 **Example**
-![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/manager1.png)
-
 ![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/manager2.png)
+
+![node bamazonCustomer.js](https://github.com/andylushman/Bamazon/blob/master/Images/manager1.png)
