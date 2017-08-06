@@ -160,16 +160,16 @@ function addInventory() {
 	// Prompt the user to select an item
 	inquirer.prompt([
 		{
-			type: 'input',
-			name: 'item_id',
-			message: 'Please enter the Item ID for stock_count update.',
+			type: "input",
+			name: "item_id",
+			message: "Please enter the Item ID for stock_count update.",
 			validate: validateInteger,
 			filter: Number
 		},
 		{
-			type: 'input',
-			name: 'quantity',
-			message: 'How many would you like to add?',
+			type: "input",
+			name: "quantity",
+			message: "How many would you like to add?",
 			validate: validateInteger,
 			filter: Number
 		}
@@ -198,17 +198,17 @@ function addInventory() {
 				// console.log('productData = ' + JSON.stringify(productData));
 				// console.log('productData.stock_quantity = ' + productData.stock_quantity);
 
-				console.log('Updating Inventory...');
+				console.log("Updating Inventory...");
 
 				// Construct the updating query string
-				var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity + addQuantity) + ' WHERE item_id = ' + item;
+				var updateQueryStr = "UPDATE products SET stock_quantity = " + (productData.stock_quantity + addQuantity) + ' WHERE item_id = ' + item;
 				// console.log('updateQueryStr = ' + updateQueryStr);
 
 				// Update the inventory
 				connection.query(updateQueryStr, function(err, data) {
 					if (err) throw err;
 
-					console.log('Stock count for Item ID ' + item + ' has been updated to ' + (productData.stock_quantity + addQuantity) + '.');
+					console.log("Stock count for Item ID " + item + " has been updated to " + (productData.stock_quantity + addQuantity) + ".");
 					console.log("\n---------------------------------------------------------------------\n");
 
 					// End the database connection
@@ -226,43 +226,43 @@ function createNewProduct() {
 	// Prompt the user to enter information about the new product
 	inquirer.prompt([
 		{
-			type: 'input',
-			name: 'product_name',
-			message: 'Please enter the new product name.',
+			type: "input",
+			name: "product_name",
+			message: "Please enter the new product name.",
 		},
 		{
-			type: 'input',
-			name: 'department_name',
-			message: 'Which department does the new product belong to?',
+			type: "input",
+			name: "department_name",
+			message: "Which department does the new product belong to?",
 		},
 		{
-			type: 'input',
-			name: 'price',
-			message: 'What is the price per unit?',
+			type: "input",
+			name: "price",
+			message: "What is the price per unit?",
 			validate: validateNumeric
 		},
 		{
-			type: 'input',
-			name: 'stock_quantity',
-			message: 'How many items are in stock?',
+			type: "input",
+			name: "stock_quantity",
+			message: "How many items are in stock?",
 			validate: validateInteger
 		}
 	]).then(function(input) {
 		// console.log('input: ' + JSON.stringify(input));
 
-		console.log('Adding New Item: \n    product_name = ' + input.product_name + '\n' +
-									   '    department_name = ' + input.department_name + '\n' +
-									   '    price = ' + input.price + '\n' +
-									   '    stock_quantity = ' + input.stock_quantity);
+		console.log("Adding New Item: \n    product_name = " + input.product_name + "\n" +
+									   "    department_name = " + input.department_name + "\n" +
+									   "    price = " + input.price + "\n" +
+									   "    stock_quantity = " + input.stock_quantity);
 
 		// Create the insertion query string
-		var queryStr = 'INSERT INTO products SET ?';
+		var queryStr = "INSERT INTO products SET ?";
 
 		// Add new product to the db
 		connection.query(queryStr, input, function (error, results, fields) {
 			if (error) throw error;
 
-			console.log('New product has been added to the inventory under Item ID ' + results.insertId + '.');
+			console.log("New product has been added to the inventory under Item ID " + results.insertId + ".");
 			console.log("\n---------------------------------------------------------------------\n");
 
 			// End the database connection
