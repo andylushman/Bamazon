@@ -136,20 +136,20 @@ function validateInteger(value) {
 	if (integer && (sign === 1)) {
 		return true;
 	} else {
-		return 'Please enter a whole non-zero number.';
+		return "Please enter a whole non-zero number.";
 	}
 }
 
 // validateNumeric makes sure that the user is supplying only positive numbers for their inputs
 function validateNumeric(value) {
 	// Value must be a positive number
-	var number = (typeof parseFloat(value)) === 'number';
+	var number = (typeof parseFloat(value)) === "number";
 	var positive = parseFloat(value) > 0;
 
 	if (number && positive) {
 		return true;
 	} else {
-		return 'Please enter a positive number for the unit price.'
+		return "Please enter a positive number for the unit price."
 	}
 }
 
